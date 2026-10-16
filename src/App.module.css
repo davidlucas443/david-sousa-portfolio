@@ -1,0 +1,4 @@
+.notFound { min-height: 65vh; padding-block: 80px; display: grid; align-content: center; justify-items: start; gap: 24px; }
+.notFound h1 { font-size: clamp(38px, 6vw, 70px); letter-spacing: -.05em; }
+.notFound p { color: var(--muted); line-height: 1.7; }
+.notFound a { border: 1px solid var(--line); border-radius: 6px; padding: 15px 20px; }
