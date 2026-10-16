@@ -2,6 +2,8 @@
 
 Portfólio local em React, TypeScript estrito, Vite e CSS Modules. Português do Brasil. A referência original `referenciaVisual.png` permanece preservada na raiz.
 
+Repositório público: [davidlucas443/david-sousa-portfolio](https://github.com/davidlucas443/david-sousa-portfolio). Branch principal: `main`.
+
 ## Executar
 
 Requisitos escolhidos: Node `^20.19.0 || >=22.13.0` e npm >=10. Ambiente verificado: Node 25.8.2 e npm 11.11.1. Os requisitos de cada ferramenta e a escolha de TypeScript estão em [docs/briefing.md](docs/briefing.md).

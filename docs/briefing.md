@@ -6,6 +6,8 @@ Fonte: pedido anexado pelo usuário. Registro inicial em 15/10/2026, horário de
 
 Portfólio profissional em português do Brasil para David Sousa, em busca de estágio ou vaga de desenvolvedor backend Java júnior. Primeira etapa: página inicial, páginas dos projetos, estrutura local, conteúdo confirmado e documentação. Sem backend, banco, autenticação, painel, formulário, commit, push, PR ou publicação.
 
+Atualização de escopo em 15/10/2026: após a entrega local, David autorizou criar um repositório no GitHub, dividir o trabalho em vários commits e enviar o código. Também confirmou que o repositório deve ser público. Essa autorização substitui o limite inicial de não realizar commit/push para esta etapa de versionamento; não inclui deploy do site. Ver `docs/versionamento.md`.
+
 ## Ambiente e stack
 
 - Ambiente verificado: Node v25.8.2 e npm 11.11.1.

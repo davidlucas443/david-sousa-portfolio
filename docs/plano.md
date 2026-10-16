@@ -11,6 +11,10 @@
 
 O resultado executado e seus limites são registrados em `docs/validacao.md`.
 
+## Etapa posterior autorizada: Git e GitHub
+
+Em 15/10/2026, após a entrega local, David solicitou criar o repositório, dividir o trabalho em vários commits e enviar ao GitHub. Confirmou a visibilidade pública. O repositório é `davidlucas443/david-sousa-portfolio`, com branch `main`; o escopo e a organização estão em `docs/versionamento.md`.
+
 ## Decisões de implementação
 
 - Links e recarga de documento nativos para três rotas; sem roteador adicional.

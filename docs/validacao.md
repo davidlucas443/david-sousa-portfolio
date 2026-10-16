@@ -71,4 +71,4 @@ Evidências locais, ignoradas pelo Git:
 
 Não houve teste em aparelho físico, leitor de tela, Firefox ou Safari. Os links externos usam os endereços fornecidos, mas o QA de navegação se concentra nas rotas locais; não verifica disponibilidade contínua de sites externos. Não foram executados os projetos Emprega.co ou Help Pet, seus backends ou seus testes. Não há afirmação de funcionamento de endpoints externos ou autoria de código coletivo.
 
-Os servidores temporários de revisão são encerrados ao concluir a tarefa; para revisar novamente, seguir o README. Nenhum commit, push, PR, deploy ou publicação foi realizado.
+Os servidores temporários de revisão foram encerrados ao concluir a implementação; para revisar novamente, seguir o README. Na entrega local inicial, não houve commit, push, PR ou deploy. O versionamento posterior, autorizado por David, está registrado em `docs/versionamento.md`.
