@@ -1,0 +1,8 @@
+.scene { width: 100%; position: relative; align-self: center; }
+.diagram { width: 100%; height: auto; overflow: visible; }
+.diagram text { font: 11px 'Geist Variable', sans-serif; letter-spacing: 1.7px; fill: #d6dadf; }
+.module { transition: filter 250ms ease; }
+.module:hover { filter: brightness(1.4); }
+.flow { animation: flow 14s linear infinite; }
+@keyframes flow { to { stroke-dashoffset: -564; } }
+@media (prefers-reduced-motion: reduce) { .flow { animation: none; stroke-dasharray: none; opacity: .18; } }
