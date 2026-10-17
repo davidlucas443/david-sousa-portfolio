@@ -1,5 +1,35 @@
 # Fontes e proveniência
 
+## Vídeos editados recebidos em 17/10/2026
+
+David forneceu duas versões editadas em `C:\Users\David\Downloads`, sem referências pessoais, e pediu a substituição das mídias públicas. Os arquivos copiados para `public/media` têm os mesmos SHA-256 dos arquivos recebidos:
+
+| Mídia atual | Arquivo fornecido | SHA-256 |
+| --- | --- | --- |
+| `public/media/emprega-co.mp4` | `emprega-co-sem-referencias-pessoais.mp4` | `6112477A1D87162E3C5B77090A4CFA88AF5105D1674553984285C9EB04B7575E` |
+| `public/media/helppet.mp4` | `helppet-sem-referencias-pessoais.mp4` | `EE8B1488832A3E8152241AE4621F895BEF539ACBE8F8DE4E065E8C46FB504CA6` |
+
+Os posters existentes foram inspecionados visualmente e não exibem nomes, créditos ou outras referências pessoais retiradas. A autorização de uso de Victor foi informada por David no pedido anterior; o crédito e o link saíram da interface pública por solicitação dele, mas a origem das versões originais permanece registrada abaixo. As versões anteriores dos MP4 foram guardadas apenas na pasta local ignorada `.qa/previous-media/` para reversão desta edição; não são servidas pelo portfólio.
+
+## Atualização de 17/10/2026
+
+David forneceu diretamente a URL do LinkedIn e a descrição das suas contribuições no Emprega.co (cadastro PF/PJ, vagas, candidaturas, propostas, contratos, mensageria, notificações, treinamentos, segurança e integrações no aplicativo). Esse relato pessoal fundamenta o novo texto; a implementação não foi verificada em um repositório da API Emprega.co nesta rodada. As exportações do Figma listadas abaixo foram preservadas como referências locais, mas saíram da renderização pública; os vídeos e posters documentados nesta página são a apresentação visual dos projetos.
+
+## Ampliação consultada em 17/10/2026
+
+- [Portfólio de Victor, `src/lib/content.ts`](https://github.com/eovitu/portfolio-vitu/blob/14b7598c0eb3ebd37e99675a25c9b36081e1fcf1/src/lib/content.ts), revisão `14b7598c0eb3ebd37e99675a25c9b36081e1fcf1`: referência editorial para as jornadas de candidatos e contratantes e para a apresentação do HelpPet. Seus relatos de autoria, ONG, pagamentos, testes e produção não foram transferidos para o texto de David.
+- [Gateway coletivo HelpPet, `application.yml`](https://github.com/HelpPetSENAI/gateway-help-pet-g8/blob/75bb160db4973fd98e1db8d45c470d2280e147e7/src/main/resources/application.yml) e [regras de acesso](https://github.com/HelpPetSENAI/gateway-help-pet-g8/blob/75bb160db4973fd98e1db8d45c470d2280e147e7/src/main/java/com/helppet/gateway/config/SecurityConfig.java), revisão `75bb160db4973fd98e1db8d45c470d2280e147e7`: sustentam somente a descrição das rotas e regras de acesso como arquitetura coletiva. Os serviços não foram executados nem sua integração validada.
+- As contribuições individuais de David permanecem fundamentadas no briefing fornecido por ele e registrado em `docs/briefing.md`.
+
+| Arquivo usado na rodada anterior | Origem em `eovitu/portfolio-vitu`, revisão `14b7598` | Git blob SHA-1 conferido naquela rodada |
+| --- | --- | --- |
+| `public/media/emprega-co.mp4` | `public/media/emprega-co.mp4` | `8bf71832c07484902780491e2bbe351d750fa959` |
+| `public/media/emprega-co-poster.webp` | `public/media/emprega-co-poster.webp` | `a92cde9ff59c2d65de2db47d56b880fad0d2a34b` |
+| `public/media/helppet.mp4` | `public/media/helppet.mp4` | `68541b63502c5cdbc0794107e2d36166f7d85f91` |
+| `public/media/helppet-poster.webp` | `public/media/helppet-poster.webp` | `56d991dfa1deddb925ae6c8478b41a32f0c6a6eb` |
+
+Na rodada anterior, os hashes dos quatro arquivos locais coincidiam com os blobs da revisão consultada. Os MP4 originais tinham duração de 38 segundos; a inspeção dos átomos `mvhd` e `hdlr` encontrou trilha de vídeo e metadados, sem trilha de áudio. Victor autorizou o uso conforme o pedido de David. As mídias são demonstrações com telas recriadas e dados ilustrativos.
+
 Consulta em 15/10/2026 (São Paulo). Somente leitura; nenhuma alteração nos projetos originais, repositórios ou Figma.
 
 ## Referência local

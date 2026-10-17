@@ -1,5 +1,9 @@
 # Briefing confirmado
 
+## Atualização de 17/10/2026
+
+David forneceu seu [LinkedIn](https://www.linkedin.com/in/david-sousa-406808349/) e pediu que ele apareça com o GitHub na abertura e no contato. Também forneceu o relato detalhado de suas contribuições ao Emprega.co, registrado no conteúdo atual em `src/content/portfolio.ts`. A apresentação visual da home e das páginas internas agora usa apenas os vídeos locais; os links do Figma continuam disponíveis. O restante deste documento registra decisões da primeira etapa e pode mencionar a composição anterior.
+
 Fonte: pedido anexado pelo usuário. Registro inicial em 15/10/2026, horário de São Paulo.
 
 ## Objetivo e escopo
@@ -66,4 +70,4 @@ Conteúdo em `src/content/portfolio.ts`, componentes reutilizáveis em `src/comp
 
 ## Contato e limites de conteúdo
 
-Durante a implementação, David forneceu [seu GitHub](https://github.com/davidlucas443) e pediu que apenas esse canal fosse incluído por enquanto. O link aparece na abertura e no contato. E-mail e LinkedIn não foram fornecidos e ficam omitidos. Nenhum endereço foi inferido a partir das contas conectadas. Currículo inexistente: sem botão de download.
+Na primeira etapa, David forneceu [seu GitHub](https://github.com/davidlucas443) como único canal. Em 17/10/2026, acrescentou o [LinkedIn](https://www.linkedin.com/in/david-sousa-406808349/); ambos aparecem na abertura e no contato. E-mail e currículo permanecem omitidos por não terem sido fornecidos. Nenhum endereço foi inferido a partir das contas conectadas.

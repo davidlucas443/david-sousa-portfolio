@@ -1,18 +1,31 @@
 # Pendências concretas
 
+## Atualização de 17/10/2026
+
+- LinkedIn fornecido e incluído na abertura e no contato: https://www.linkedin.com/in/david-sousa-406808349/.
+- David detalhou suas contribuições pessoais no Emprega.co nesta etapa. A confirmação por código da branch correspondente ainda é pendente para verificação independente; o portfólio não atribui a ele o sistema inteiro, o painel administrativo nem a integração completa de pagamentos.
+- As exportações do Figma continuam guardadas como referência e com fonte documentada; não são mais renderizadas na home ou nas páginas internas dos projetos.
+
+## Após a ampliação de 17/10/2026
+
+- As mídias de Victor estão incorporadas localmente, com proveniência em `docs/fontes.md`; nenhuma URL dele é usada pelo player em produção.
+- A arquitetura do gateway HelpPet foi consultada e descrita como trabalho coletivo. Permanece sem comprovação a autoria pessoal de David nesse repositório e o funcionamento integrado dos serviços.
+- A consulta ao portfólio de Victor não substitui o código da branch apropriada da API Emprega.co. Detalhes como regras de candidatura, pagamento e homologação não foram adicionados por falta dessa verificação.
+- O relato de David sobre geolocalização permanece como contribuição pessoal informada por ele; as telas e o vídeo não são evidência da implementação ou funcionamento desse fluxo.
+
 ## Dados pessoais
 
-- E-mail profissional e URL completa do LinkedIn, apenas caso David queira incluí-los futuramente. Sua decisão atual é publicar somente o GitHub.
+- E-mail profissional, apenas caso David queira incluí-lo futuramente. Os canais atuais são GitHub e LinkedIn.
 - GitHub pessoal fornecido e implementado: https://github.com/davidlucas443.
 - Currículo em PDF, caso deseje oferecer download posteriormente. Não é necessário para executar esta etapa.
 
-Somente o GitHub fornecido é renderizado. Não há links falsos, botões desabilitados ou formulário.
+GitHub e LinkedIn fornecidos são renderizados. Não há links falsos, botões desabilitados ou formulário.
 
 ## Emprega.co
 
 - URL e acesso de leitura ao repositório ou repositórios relevantes.
 - Branch/commit que representa o trabalho a apresentar.
-- Confirmação de quais partes do backend/frontend e decisões técnicas são de autoria de David.
+- Verificação independente, no código da branch apropriada, das contribuições detalhadas por David nesta etapa.
 - Código e evidências para arquitetura, endpoints, decisões de implementação e validação/testes. Não há conteúdo técnico de preenchimento na página.
 
 ## Help Pet

@@ -1,5 +1,19 @@
 # Plano da primeira etapa
 
+## Ajustes de 17/10/2026
+
+1. Consolidar o relato do Emprega.co como jornada e contribuição pessoal, sem lista de endpoints.
+2. Reutilizar um único componente de vídeo na home e nas páginas internas; retirar as imagens do Figma da renderização.
+3. Adicionar LinkedIn aos dois pontos de contato e atualizar a documentação vigente.
+4. Validar tipos, lint, build, vídeos, navegação e composição em desktop e mobile.
+
+## Ampliação de 17/10/2026
+
+1. Conferir o conteúdo local, a revisão do portfólio de Victor e o código consultável dos projetos.
+2. Copiar os dois vídeos e posters autorizados, conferir integridade e metadados e apresentá-los apenas nas páginas internas.
+3. Separar contexto, trabalho da equipe e contribuições de David; manter afirmações técnicas ligadas ao código.
+4. Tornar o header sticky e verificar âncoras, foco, vídeo e responsividade no navegador.
+
 1. **Inspeção:** preservar a referência e verificar arquivos, instruções e ambiente.
 2. **Fontes:** consultar requisitos oficiais, Figma e GitHub em modo de leitura; baixar apenas assets originais para o portfólio.
 3. **Documentação:** registrar briefing, decisões, proveniência e pendências.

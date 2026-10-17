@@ -1,5 +1,54 @@
 # Validação executada
 
+## Preparação da publicação — 17/10/2026
+
+- `npm.cmd run typecheck`, `npm.cmd run lint` e `npm.cmd run build`: aprovados. `git diff --check`: sem erros. O build de Vite gerou `dist`.
+- `npm.cmd run verify:browser` no preview do build: aprovado no Chrome headless em 15 combinações de três rotas e cinco larguras (1440, 1024, 768, 390 e 320 px). O script verificou autoplay, loop, ampliação, Escape, retorno do foco, toque emulado, movimento reduzido, bloqueio de autoplay, falha de mídia, recarga direta das páginas internas, header após rolagem, links sociais e MIME de MP4/WebP. Não encontrou erros JavaScript, recursos públicos com resposta de erro, overflow horizontal ou violações Axe nas regras testadas.
+- Capturas de home e páginas internas em desktop e mobile foram geradas em `.qa/` e inspecionadas visualmente. O teste de toque usa emulação; não houve teste em aparelho físico, leitor de tela, Firefox ou Safari.
+- Arquivos candidatos a commit foram conferidos: sem `node_modules`, `dist`, arquivos temporários ou padrões de chave privada/token. `.env.local` e `.vercel/` gerados pelo vínculo com a Vercel estão ignorados.
+
+## Layout e reprodução automática dos vídeos — 17/10/2026
+
+- Cards da home: texto à esquerda e vídeo à direita em 1440 e 1024 px; empilhamento em 768, 390 e 320 px. Os fundos receberam tons sutis de Emprega.co e Help Pet sobre grafite. Após o ajuste final de tamanho, o limite dos vídeos internos passou a 1040 px. Capturas de 1440 e 390 px das três rotas foram inspecionadas em `.qa/`.
+- Os MP4 editados de `public/media` foram preservados; seus SHA-256 continuam iguais aos registrados em `docs/fontes.md`. Cada projeto tem apenas um elemento de vídeo montado por página, inclusive durante a ampliação. Os vídeos da página usam `autoplay`, `muted`, `loop` e `playsInline`, sem controles nativos. Reprodução automática e retorno ao início após o fim foram verificados. O botão único da prévia abre um diálogo 16:9 com reprodução, botão de fechar e Escape; o foco retorna ao botão de ampliar.
+- `prefers-reduced-motion: reduce` foi emulado: sem carregamento ou reprodução automática, com poster visível e reprodução iniciada ao abrir a visualização ampliada. O bloqueio de autoplay também foi simulado; o poster permaneceu visível e não houve erro JavaScript. Uma falha de carregamento do MP4 Emprega.co foi simulada e exibiu mensagem, mantendo o poster. A interação por toque foi verificada por emulação mobile.
+- `npm.cmd run typecheck`, `npm.cmd run lint` e `npm.cmd run build`: aprovados. `npm.cmd run verify:browser` no preview do build: aprovado no Chrome headless `155.0.8059.81`, com 15 combinações das três rotas em 1440, 1024, 768, 390 e 320 px, sem overflow horizontal ou violações Axe nas regras verificadas. `git diff --check`: sem erros.
+
+Limites: não houve teste em aparelho físico, leitor de tela, Firefox ou Safari. A simulação de bloqueio de autoplay não cobre todas as políticas de mídia dos navegadores. Nenhum commit, push, PR, merge ou deploy foi realizado nesta rodada.
+
+## Vídeos editados e controles próprios — 17/10/2026
+
+- Os dois MP4 recebidos em `C:\Users\David\Downloads` foram copiados para `public/media`; os SHA-256 dos arquivos publicados coincidem com os recebidos e estão registrados em `docs/fontes.md`. Os posters foram inspecionados visualmente e não mostram as referências pessoais removidas.
+- `npm.cmd run typecheck`, `npm.cmd run lint` e `npm.cmd run build`: aprovados após a substituição das mídias e a alteração do player. `git diff --check`: sem erros.
+- `npm.cmd run verify:browser` no preview do build: aprovado no Chrome headless `155.0.8059.81`. Foram verificadas as três rotas em 1440, 1024, 768, 390 e 320 px: dois vídeos na home, um em cada página interna, proporção 16:9, quadro inteiro com `object-fit: contain`, largura de 1238 px dos vídeos da home em 1440 px, sem overflow horizontal, galerias ou imagens no conteúdo principal. As capturas desktop e mobile foram geradas em `.qa/` e inspecionadas visualmente.
+- Os botões próprios foram acionados no navegador para reprodução, pausa, término, nova reprodução e entrada/saída da tela cheia nas quatro instâncias dos vídeos. Também foram verificados foco e acionamento por teclado, exibição ao passar o mouse e acesso por toque em emulação mobile. O elemento `<video>` não possui `controls` nem autoplay; preserva `playsInline`, `poster` e `preload="none"`. Não há tempo, barra de progresso, volume, menu, legenda, crédito ou download visível na interface.
+- A falha de carregamento dos dois MP4 foi simulada nas páginas internas e exibiu a mensagem de erro. A navegação local, o header sticky e a auditoria Axe da matriz seguiram aprovados. Evidências locais em `.qa/report.json` e `.qa/*.png`, ignoradas pelo Git.
+
+Limites desta rodada: os testes de toque usaram emulação no Chrome; não houve teste em aparelho físico, leitor de tela, Firefox ou Safari. A inspeção visual dos posters não substitui análise quadro a quadro dos vídeos editados. Nenhum commit, push, PR, merge ou deploy foi realizado nesta rodada.
+
+## Ajustes de 17/10/2026: conteúdo, vídeos e LinkedIn
+
+- `npm.cmd run typecheck`, `npm.cmd run lint` e `npm.cmd run build`: aprovados no estado atualizado, sem instalar dependências.
+- `npm.cmd run verify:browser` no preview do build: aprovado no Chrome headless `155.0.8059.81`, com as três rotas em 1440, 1024, 768, 390 e 320 px. Sem overflow horizontal ou violações Axe reportadas nas regras verificadas.
+- O navegador confirmou dois vídeos na home, um em cada página interna e nenhuma imagem de galeria no conteúdo das três rotas. Os posters permanecem dentro dos players.
+- Reprodução, pausa, avanço e evento de download verificados nos dois vídeos da home e nos dois das páginas internas pela API de mídia do navegador. Atributos `controls`, `playsInline`, `preload="none"` e ausência de autoplay conferidos. As mensagens de falha dos dois MP4 foram verificadas em páginas internas com carregamento bloqueado.
+- Os dois links do LinkedIn na home foram conferidos quanto a endereço, nova aba e texto acessível; um deles recebeu foco por teclado. Link de pular conteúdo, foco visível, âncora, rolagem com header sticky, navegação entre projetos, recarga direta e detalhes expansíveis também passaram.
+- Capturas em 1440 e 390 px das três rotas foram inspecionadas para composição desktop/mobile. Evidências locais em `.qa/report.json` e `.qa/*.png`, ignoradas pelo Git.
+
+Limites: os controles nativos dos vídeos foram conferidos como presentes, mas a automação acionou reprodução, pausa e avanço pela API de mídia. Não houve teste em aparelho físico, leitor de tela, Firefox ou Safari. A disponibilidade externa do LinkedIn não foi verificada. Nenhum commit, push, PR, merge ou deploy foi realizado.
+
+## Ampliação de 17/10/2026
+
+- `npm.cmd run typecheck`, `npm.cmd run lint` e `npm.cmd run build`: aprovados após as alterações de conteúdo, player e header. Nenhuma dependência foi instalada.
+- `npm.cmd run verify:browser` no preview do build (`http://127.0.0.1:4173`): aprovado no Chrome headless `155.0.8059.81`, com 15 combinações das três rotas em 1440, 1024, 768, 390 e 320 px. Sem overflow horizontal, erros de recurso ou violações Axe nas regras verificadas.
+- Acesso direto e recarga das páginas internas, navegação por histórico, link de pular conteúdo, foco visível e âncora de projetos verificados. O teste mediu o header sticky no topo depois da rolagem em todas as combinações e confirmou a âncora abaixo dele.
+- Ambos os vídeos foram carregados e reproduzidos no navegador. O teste verificou pausa e avanço por meio da API de mídia, metadados de 38 segundos e 1920 × 1080, atributos `controls`, `playsInline` e `preload="none"`, ausência de autoplay, foco no player e evento de download com os nomes corretos. Os controles nativos não foram acionados por ponteiro na automação.
+- O carregamento de cada MP4 foi bloqueado separadamente no navegador para verificar a mensagem de falha. O link de download permanece disponível nesse estado.
+- Capturas em 1440 e 390 px foram geradas para as três páginas; as duas páginas internas foram inspecionadas visualmente em mobile e desktop. Evidências locais em `.qa/report.json` e `.qa/*.png`, ignoradas pelo Git.
+- `git diff --check`: sem erros de whitespace.
+
+Limites desta rodada: Chrome headless e verificações automatizadas não substituem uso em dispositivo físico, leitor de tela ou testes em outros navegadores. Não foram executados os projetos externos nem verificadas suas integrações ou produção. Nenhum commit, push, PR, merge ou deploy foi realizado.
+
 Executada em 15/10/2026, horário de São Paulo, no Windows com Node v25.8.2 e npm 11.11.1.
 
 ## Comandos
