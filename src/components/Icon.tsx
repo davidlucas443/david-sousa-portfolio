@@ -1,5 +1,5 @@
 interface IconProps {
-  name: 'arrow' | 'diagonal' | 'code' | 'education' | 'back' | 'github';
+  name: 'arrow' | 'diagonal' | 'code' | 'education' | 'back' | 'github' | 'linkedin';
   className?: string;
 }
 
@@ -10,6 +10,7 @@ const paths: Record<IconProps['name'], string> = {
   education: 'm2 8 10-5 10 5-10 5-10-5zm4 3v7l6 3 6-3v-7M2 8v9',
   back: 'M20 12H5m6-6-6 6 6 6',
   github: 'M9 19c-4 1-4-2-6-2m12 5v-4c0-1-.2-1.7-.7-2.2 3.2-.4 6.7-1.6 6.7-7.2a5.5 5.5 0 0 0-1.5-3.8c.2-1 .2-2-.1-3 0 0-1.2-.4-3.9 1.5a13 13 0 0 0-7 0C5.8 1.4 4.6 1.8 4.6 1.8c-.3 1-.3 2-.1 3A5.5 5.5 0 0 0 3 8.6c0 5.6 3.5 6.8 6.7 7.2-.5.5-.7 1.3-.7 2.2v4',
+  linkedin: 'M3 3h18v18H3zM7.5 10v7M7.5 7h.01M11 17v-7m0 3c0-2 1-3 2.5-3 1.8 0 2.5 1.1 2.5 3v4',
 };
 
 export function Icon({ name, className }: IconProps) {

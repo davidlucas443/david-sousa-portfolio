@@ -1,7 +1,7 @@
 import { Architecture } from '../components/Architecture';
 import { Icon } from '../components/Icon';
 import { Layout } from '../components/Layout';
-import { ProjectCover } from '../components/ProjectCover';
+import { ProjectVideo } from '../components/ProjectVideo';
 import { profile, projects } from '../content/portfolio';
 import styles from './Home.module.css';
 
@@ -17,7 +17,7 @@ export function Home() {
           <p className={styles.description}>{profile.intro}</p>
           <div className={styles.actions}>
             <a className={styles.primary} href="#projetos">Explorar projetos <Icon name="arrow" /></a>
-            {profile.contactLinks.map(link => <a key={link.href} className={styles.secondary} href={link.href} target="_blank" rel="noreferrer"><Icon name="github" />{link.label}<span className={styles.srOnly}> (nova aba)</span></a>)}
+            {profile.contactLinks.map(link => <a key={link.href} className={styles.secondary} href={link.href} target="_blank" rel="noreferrer"><Icon name={link.icon} />{link.label}<span className={styles.srOnly}> (nova aba)</span></a>)}
           </div>
         </div>
         <Architecture />
@@ -35,10 +35,10 @@ export function Home() {
                 <div className={styles.projectTitle}><h3>{project.name}</h3>{project.status && <span className={styles.status}><span />{project.status}</span>}</div>
                 <p className={styles.projectHeadline}>{project.headline}</p>
                 <p className={styles.projectDescription}>{project.description}</p>
-                <div className={styles.contribution}><p className={styles.eyebrow}>Minha contribuição</p><p>{project.contribution}</p></div>
+                <div className={styles.contribution}><p className={styles.eyebrow}>Minha contribuição</p><p>{project.homeContribution}</p></div>
                 <a className={styles.explore} href={`/projetos/${project.slug}`}>Explorar projeto <span className={styles.srOnly}>{project.name}</span><Icon name="diagonal" /></a>
               </div>
-              <ProjectCover project={project} />
+              <ProjectVideo project={project} compact />
             </article>
           ))}
         </div>
@@ -53,7 +53,7 @@ export function Home() {
       </section>
       <section id="contato" className={styles.contact} aria-labelledby="contact-title">
         <div><p className={styles.index}>03 <span /></p><h2 id="contact-title">Vamos conversar.</h2></div>
-        <div className={styles.contactContent}><p>{profile.contact}</p><div className={styles.contactLinks}>{profile.contactLinks.map(link => <a key={link.href} href={link.href} target="_blank" rel="noreferrer"><Icon name="github" />{link.label}<span className={styles.srOnly}> (nova aba)</span><Icon name="diagonal" /></a>)}</div></div>
+        <div className={styles.contactContent}><p>{profile.contact}</p><div className={styles.contactLinks}>{profile.contactLinks.map(link => <a key={link.href} href={link.href} target="_blank" rel="noreferrer"><Icon name={link.icon} />{link.label}<span className={styles.srOnly}> (nova aba)</span><Icon name="diagonal" /></a>)}</div></div>
       </section>
     </Layout>
   );

@@ -11,25 +11,15 @@
 .summary > p:not(.eyebrow) { font-size: 15px; color: var(--muted); line-height: 1.9; margin-top: 12px; }
 .summary .eyebrow:not(:first-child) { margin-top: 30px; }
 .summary > p.contribution { color: var(--text); }
-.cover { border-radius: 14px; overflow: hidden; }
-.cover > div > div { min-height: 470px; max-height: 560px; padding-inline: 10%; gap: 8%; }
-.cover > div > div > div:first-child { max-width: 330px; width: 100%; justify-self: center; }
-.cover > div > div > div:last-child { max-width: 210px; }
-.editorial, .technical { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; border-bottom: 1px solid var(--line); padding: 60px 0; }
-.editorial h2, .flow h2, .technical h2, .resources h2 { font-size: clamp(27px, 3vw, 37px); letter-spacing: -.045em; line-height: 1.2; font-weight: 570; }
-.editorial ul { padding-left: 18px; margin: 0; display: grid; gap: 15px; }
-.editorial li { font-size: 15px; line-height: 1.8; padding-left: 8px; color: #d5d7db; }
-.editorial li::marker { color: #72777d; }
-.learning { color: var(--muted); margin-top: 26px; font-size: 14px; line-height: 1.9; }
-.flow { padding: 54px 0; border-bottom: 1px solid var(--line); }
-.flowHeading { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; margin-bottom: 34px; }
-.flowHeading > p { font-size: 14px; line-height: 1.9; color: var(--muted); }
-.screens { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.screenCanvas { background: #16191b; padding: 30px; display: flex; justify-content: center; align-items: flex-start; border: 1px solid var(--line); border-radius: 10px; }
-.screenCanvas.emprega-co { background: #1b1613; }
-.screenCanvas.help-pet { background: #0f1b12; }
-.screenCanvas img { width: min(100%, 280px); height: auto; }
-.screens figcaption { color: var(--muted); font-size: 12px; padding-top: 14px; }
+.team, .editorial, .technical { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; border-bottom: 1px solid var(--line); padding: 60px 0; }
+.team h2, .editorial h2, .videoSection h2, .technical h2, .resources h2 { font-size: clamp(27px, 3vw, 37px); letter-spacing: -.045em; line-height: 1.2; font-weight: 570; }
+.team p { font-size: 15px; line-height: 1.9; color: #d5d7db; }
+.editorialBody { display: grid; gap: 18px; }
+.editorialBody > p { font-size: 15px; line-height: 1.8; color: #d5d7db; }
+.editorialBody > .learning { color: var(--muted); margin-top: 8px; font-size: 14px; line-height: 1.9; }
+.videoSection { padding: 46px 0; border-bottom: 1px solid var(--line); }
+.videoSection h2 { margin-bottom: 22px; }
+.videoSection > div { max-width: 1040px; margin-inline: auto; }
 .technical .eyebrow { margin-bottom: 12px; }
 .technical details { border-bottom: 1px solid var(--line); }
 .technical details:first-child { border-top: 1px solid var(--line); }
@@ -52,8 +42,7 @@
 .next:hover { background: #ffffff06; }
 .newTab { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 @media (max-width: 800px) {
-  .overview, .editorial, .flowHeading, .technical { gap: 35px; }
-  .cover > div > div { min-height: 390px; padding-inline: 7%; }
+  .overview, .team, .editorial, .technical { gap: 35px; }
 }
 @media (max-width: 600px) {
   .back { margin-top: 14px; }
@@ -61,13 +50,8 @@
   .overview h1 { font-size: 56px; }
   .lead { font-size: 22px; }
   .summary { padding-top: 0; }
-  .cover > div > div { min-height: 0; max-height: none; padding: 55px 24px 24px; gap: 20px; }
-  .cover > div > div > div:last-child { max-width: 190px; }
-  .editorial, .technical { grid-template-columns: 1fr; padding: 38px 0; gap: 25px; }
-  .flow { padding: 38px 0; }
-  .flowHeading { grid-template-columns: 1fr; gap: 20px; }
-  .screens { grid-template-columns: 1fr; gap: 28px; }
-  .screenCanvas { padding: 26px; }
+  .team, .editorial, .technical { grid-template-columns: 1fr; padding: 38px 0; gap: 25px; }
+  .videoSection { padding: 38px 0; }
   .resources > div { flex-direction: column; align-items: flex-start; gap: 10px; }
   .next { padding: 23px; }
 }

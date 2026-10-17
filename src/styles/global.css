@@ -26,7 +26,7 @@
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
-html { scroll-padding-top: 32px; }
+html { scroll-padding-top: 120px; }
 body { margin: 0; min-width: 320px; }
 body, button, a { -webkit-tap-highlight-color: transparent; }
 ::selection { background: #d7dce4; color: #090b0c; }
@@ -44,4 +44,7 @@ p { text-wrap: pretty; }
 button { font: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+@media (max-width: 600px) {
+  html { scroll-padding-top: 100px; }
 }
