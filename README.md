@@ -29,11 +29,11 @@ O preview de produção usa `http://127.0.0.1:4173` por padrão.
 ## Rotas e revisão
 
 - `/`: abertura, projetos, sobre/competências e contato.
-- `/projetos/emprega-co`: contexto, contribuição, telas originais e fonte Figma.
-- `/projetos/help-pet`: contexto, contribuição, telas, observações técnicas verificadas e fontes.
+- `/projetos/emprega-co`: contexto, contribuições, vídeo de apresentação e link do Figma.
+- `/projetos/help-pet`: contexto, contribuições, vídeo de apresentação, observações técnicas e fontes.
 - Outros caminhos: página informativa de conteúdo não encontrado.
 
-Links nativos entre documentos e seleção de conteúdo pelo pathname dispensam uma biblioteca de roteamento. Vite atende acesso direto às rotas em dev e preview. Uma futura hospedagem precisará encaminhar caminhos da aplicação para index.html. Nenhuma hospedagem foi configurada ou publicada nesta etapa.
+Links nativos entre documentos e seleção de conteúdo pelo pathname dispensam uma biblioteca de roteamento. Vite atende acesso direto às rotas em dev e preview. Na Vercel, `vercel.json` define o build de Vite em `dist` e reescreve `/projetos/*` para `index.html`, preservando os arquivos estáticos.
 
 Para revisar: abrir as três rotas diretamente e recarregar, seguir links de projeto, usar voltar/avançar, navegar com Tab/Enter, testar o link de pular conteúdo e os elementos expansíveis, reduzir a largura até 320px e ativar movimento reduzido no sistema ou em DevTools. Os detalhes expansíveis usam `details`/`summary` nativos.
 
@@ -48,8 +48,8 @@ O script grava evidências locais ignoradas pelo Git em `.qa/`. A variável `POR
 
 ## Organização
 
-Conteúdo em `src/content/portfolio.ts`; componentes em `src/components`; páginas em `src/pages`; CSS global/tokens em `src/styles/global.css`; CSS Modules junto de cada componente. Assets originais dos projetos em `public/assets/projects`, com proveniência em [docs/fontes.md](docs/fontes.md).
+Conteúdo em `src/content/portfolio.ts`; componentes em `src/components`; páginas em `src/pages`; CSS global/tokens em `src/styles/global.css`; CSS Modules junto de cada componente. Vídeos e posters locais em `public/media`; exportações anteriores do Figma permanecem em `public/assets/projects` como referência, sem renderização nas páginas. Proveniência em [docs/fontes.md](docs/fontes.md).
 
 [Briefing](docs/briefing.md) · [Plano](docs/plano.md) · [Pendências](docs/pendencias.md).
 
-O GitHub pessoal fornecido está na abertura e no contato. E-mail, LinkedIn e currículo ficam omitidos conforme a decisão atual do usuário. Nenhum endereço foi inventado. Seções técnicas sem evidência não são publicadas.
+GitHub e LinkedIn fornecidos por David aparecem na abertura e no contato. E-mail e currículo permanecem omitidos. Nenhum endereço foi inventado.
